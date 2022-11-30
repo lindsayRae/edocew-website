@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>edocew</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Silicon - Multipurpose Technology Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#6366f1"
+    />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header
+        class="header navbar navbar-expand-lg position-absolute navbar-sticky"
+      >
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3" style="padding-top: 0">
+            <img src="assets/img/edocew_logo.png" width="130" alt="edocew" />
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#services" class="nav-link" data-scroll>Services</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#testimonials" class="nav-link" data-scroll
+                    >Testimonials</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#process" class="nav-link" data-scroll>Process</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#portfolio" class="nav-link" data-scroll
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link" data-scroll>About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4"
+            data-bs-toggle="mode"
+          >
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Light</label
+            >
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"
+              >Dark</label
+            >
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
+            class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bx bx-mail-send fs-5 lh-1 me-1"></i>
+            &nbsp;Contact Us
+          </a>
+        </div>
+      </header>
+      <!-- Hero -->
+      <section
+        class="overflow-hidden pt-5"
+        style="
+          background: radial-gradient(
+            116.18% 118% at 50% 100%,
+            rgba(99, 102, 241, 0.1) 0%,
+            rgba(218, 70, 239, 0.05) 41.83%,
+            rgba(241, 244, 253, 0.07) 82.52%
+          );
+        "
+      >
+        <div class="container pt-3 pt-sm-4 pt-xl-5">
+          <div class="row pt-md-2 pt-lg-5">
+            <div
+              class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5"
+            >
+              <h1 class="display-4 text-center text-md-start mb-4">
+                Attract
+                <span style="color: #d719ff">Customers</span> with a Great
+                Website
+              </h1>
+              <p
+                class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5"
+              >
+                We create modern websites to get your business the attention it
+                deserves.
+              </p>
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start"
+              >
+                <a href="#" class="btn btn-primary w-100 w-sm-auto">
+                  Contact Us Today
+                </a>
+              </div>
+              <div
+                class="position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2"
+              >
+                <a
+                  href="#services"
+                  class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3"
+                  data-scroll
+                  data-scroll-offset="120"
+                >
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <span class="fs-sm">Discover more</span>
+              </div>
+            </div>
+            <div class="col-md-7 align-self-end">
+              <div
+                class="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0"
+                style="max-width: 632px"
+              >
+                <div class="ratio ratio-1x1"></div>
+                <img
+                  src="assets/img/hero-phone-1.png"
+                  class="rellax position-absolute top-0 start-0 zindex-2"
+                  data-rellax-speed="1.6"
+                  data-disable-parallax-down="md"
+                  alt="Phone"
+                />
+                <img
+                  src="assets/img/hero-phone-2.png"
+                  class="rellax position-absolute top-0 start-0"
+                  data-rellax-speed="2.8"
+                  data-disable-parallax-down="md"
+                  alt="Phone"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="container py-5 my-md-2 my-lg-4 my-xl-5" id="services">
+        <h2 class="h1 text-center pb-3 pb-md-4">Website Services</h2>
+
+        <div class="table-responsive-xxl pt-md-3">
+          <div class="row flex-nowrap pb-4">
+            <div class="col">
+              <div
+                class="card h-100 border-0 shadow-sm p-xxl-3"
+                style="min-width: 18rem"
+              >
+                <div class="card-body">
+                  <div class="d-flex align-items-center pb-2 pb-md-3 mb-4">
+                    <div class="ps-4">
+                      <h3 class="fs-lg fw-normal text-body mb-2">Basic</h3>
+                      <h4 class="h3 lh-1 mb-0">
+                        <span data-monthly-price>Landing Page</span>
+                      </h4>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled fs-sm pb-md-3 mb-3">
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Design customization
+                    </li>
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Responsive design
+                    </li>
+                    <li class="d-flex text-muted mb-2">
+                      <i class="bx bx-x fs-xl me-1"></i>
+                      Includes source code
+                    </li>
+                    <li class="d-flex text-muted mb-2">
+                      <i class="bx bx-x fs-xl me-1"></i>
+                      Contact form
+                    </li>
+                    <li class="d-flex text-muted">
+                      <i class="bx bx-x fs-xl me-1"></i>
+                      Multi-page website
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer border-0 pt-0 pb-4">
+                  <a href="#" class="btn btn-outline-primary w-100"
+                    >Free Consultation</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 border-0 bg-primary shadow-primary shadow-dark-mode-none p-xxl-3"
+                style="min-width: 18rem"
+              >
+                <div class="card-body">
+                  <div class="d-flex align-items-center pb-2 pb-md-3 mb-4">
+                    <!-- <div
+                      class="flex-shrink-0 rounded-3"
+                      style="background-color: rgba(255, 255, 255, 0.1)"
+                    >
+                      <img
+                        src="assets/img/landing/saas-1/pricing/standard.png"
+                        width="84"
+                        alt="Icon"
+                      />
+                    </div> -->
+                    <div class="ps-4">
+                      <h3 class="fs-lg fw-normal text-light opacity-70 mb-2">
+                        Standard
+                      </h3>
+                      <h4 class="h3 text-light lh-1 mb-0">
+                        <span data-monthly-price>Landing Page +</span>
+                      </h4>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled fs-sm pb-md-3 mb-3">
+                    <li class="d-flex text-light mb-2">
+                      <i class="bx bx-check fs-xl me-1"></i>
+                      <span class="opacity-70">Design customization</span>
+                    </li>
+                    <li class="d-flex text-light mb-2">
+                      <i class="bx bx-check fs-xl me-1"></i>
+                      <span class="opacity-70">Responsive design</span>
+                    </li>
+                    <li class="d-flex text-light mb-2">
+                      <i class="bx bx-check fs-xl me-1"></i>
+                      <span class="opacity-70">Includes source code</span>
+                    </li>
+                    <li class="d-flex text-light mb-2">
+                      <i class="bx bx-check fs-xl me-1"></i>
+                      <span class="opacity-70">Contact form</span>
+                    </li>
+                    <li class="d-flex text-light opacity-50">
+                      <i class="bx bx-x fs-xl me-1"></i>
+                      Multi-page website
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer border-0 pt-0 pb-4">
+                  <a href="#" class="btn btn-light w-100">Free Consultation</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="card h-100 border-0 shadow-sm p-xxl-3"
+                style="min-width: 18rem"
+              >
+                <div class="card-body">
+                  <div class="d-flex align-items-center pb-2 pb-md-3 mb-4">
+                    <!-- <div class="flex-shrink-0 bg-secondary rounded-3">
+                      <img
+                        src="assets/img/landing/saas-1/pricing/ultimate.png"
+                        width="84"
+                        alt="Icon"
+                      />
+                    </div> -->
+                    <div class="ps-4">
+                      <h3 class="fs-lg fw-normal text-body mb-2">Ultimate</h3>
+                      <h4 class="h3 lh-1 mb-0">
+                        <span data-monthly-price>Multi Page</span>
+                      </h4>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled fs-sm pb-md-3 mb-3">
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Design customization
+                    </li>
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Responsive design
+                    </li>
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Includes source code
+                    </li>
+                    <li class="d-flex mb-2">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Contact form
+                    </li>
+                    <li class="d-flex">
+                      <i class="bx bx-check fs-xl text-primary me-1"></i>
+                      Multi-page website
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer border-0 pt-0 pb-4">
+                  <a href="#" class="btn btn-outline-primary w-100"
+                    >Free Consultation</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use cases (Tabs) -->
+        <div class="pt-5 pb-2 mt-3 mt-sm-4 mt-xl-5">
+          <h3 class="h3 text-center pb-3 pb-lg-4">Add-Ons</h3>
+
+          <!-- Nav tabs -->
+          <ul
+            class="nav nav-tabs flex-nowrap justify-content-lg-center overflow-auto pb-2 mb-3 mb-lg-4"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-nowrap active"
+                id="domains-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#domains"
+                type="button"
+                role="tab"
+                aria-controls="domains"
+                aria-selected="true"
+              >
+                <i class="bx bx-atom fs-lg opacity-60 me-2"></i>
+                Domain Registration
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-nowrap"
+                id="hosting-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#hosting"
+                type="button"
+                role="tab"
+                aria-controls="hosting"
+                aria-selected="false"
+              >
+                <i class="bx bx-cloud-upload fs-lg opacity-60 me-2"></i>
+                Website Hosting
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-nowrap"
+                id="google-analytics-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#google-analytics"
+                type="button"
+                role="tab"
+                aria-controls="google-analytics"
+                aria-selected="false"
+              >
+                <i class="bx bx-line-chart fs-lg opacity-60 me-2"></i>
+                Google Analytics
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-nowrap"
+                id="website-monitoring-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#website-monitoring"
+                type="button"
+                role="tab"
+                aria-controls="website-monitoring"
+                aria-selected="false"
+              >
+                <i class="bx bx-glasses fs-lg opacity-60 me-2"></i>
+                Website Monitoring
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content bg-secondary rounded-3 py-4">
+            <!-- Domains -->
+            <div
+              class="tab-pane fade show active"
+              id="domains"
+              role="tabpanel"
+              aria-labelledby="domains-tab"
+            >
+              <div
+                class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0"
+              >
+                <div
+                  class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start"
+                >
+                  <h3 class="mb-lg-4">Domain Registration</h3>
+                  <p>
+                    If you're establishing a website you will need a custom
+                    domain name. Domain names are usually purchased in one to
+                    three year terms. Once the domain name is purchased you will
+                    update your domain records to point traffic to your hosting
+                    provider. We can help you register your domain and update
+                    appropriate configuration settings required for website
+                    hosting.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-7 mt-n3 mt-md-4">
+                  <img
+                    src="assets/img/add-ons/domains564x346.png"
+                    class="d-block my-lg-2 mx-auto me-md-0 rounded-3"
+                    width="502"
+                    alt="Image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Hosting -->
+            <div
+              class="tab-pane fade"
+              id="hosting"
+              role="tabpanel"
+              aria-labelledby="hosting-tab"
+            >
+              <div
+                class="row align-items-center pt-3 pb-2 pb-sm-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0"
+              >
+                <div
+                  class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start"
+                >
+                  <h3 class="mb-lg-4">Website Hosting</h3>
+                  <p>
+                    Web hosting is a critical element of running your website.
+                    Inexpensive websites paired with legacy web applications can
+                    lead to a poor user experience. We can help you establish
+                    and configure hosting on powerful platforms such as Amazon
+                    Web Services and Heroku. Scalability as your website scales
+                    is critical and finding a trusted hosting provider can make
+                    your break your users experience.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-7 mt-n3 mt-md-4">
+                  <img
+                    src="assets/img/add-ons/hosting564x346.png"
+                    class="d-block my-lg-2 mx-auto me-md-0 rounded-3"
+                    width="502"
+                    alt="Image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Analytics -->
+            <div
+              class="tab-pane fade"
+              id="google-analytics"
+              role="tabpanel"
+              aria-labelledby="google-analytics-tab"
+            >
+              <div
+                class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0"
+              >
+                <div
+                  class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start"
+                >
+                  <h3 class="mb-lg-4">Google Analytics</h3>
+                  <p>
+                    Google Analytics is an application that you embed into a
+                    website to identify how your users are interacting with your
+                    content. Would you like to know if users are getting to your
+                    contact form but then failing to send their contact
+                    information? Google Analytics can help provide data to make
+                    better design decisions. Google Analytics can provide you
+                    with visiter demographic information, how long they stayed
+                    on your website, what they looked at, and so much more to
+                    help you start building a profile of your website users.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-7 mt-n3 mt-md-4">
+                  <img
+                    src="assets/img/add-ons/google_analytics564x346png.png"
+                    class="d-block mb-lg-2 mx-auto me-md-0 rounded-3"
+                    width="502"
+                    alt="Image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Website monitoring -->
+            <div
+              class="tab-pane fade"
+              id="website-monitoring"
+              role="tabpanel"
+              aria-labelledby="website-monitoring-tab"
+            >
+              <div
+                class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0"
+              >
+                <div
+                  class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start"
+                >
+                  <h3 class="mb-lg-4">Website Monitoring</h3>
+                  <p>
+                    Website monitoring is the process of testing and verifying
+                    that end-users can interact with your website. Website
+                    monitoring is critical as your website grows in popularity.
+                    On demand shoppers need website content available to them 24
+                    hours a day 7 days a week. Website monitoring allows you to
+                    have confidence that your online presence is available at
+                    all times.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-7 mt-n3 mt-md-4">
+                  <img
+                    src="assets/img/add-ons/monitoring564x346.png"
+                    class="d-block mb-lg-2 mx-auto me-md-0 rounded-3"
+                    width="502"
+                    alt="Image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+
+      <section class="container py-5 my-md-2 my-lg-4 my-xl-5" id="testimonials">
+        <h2 class="h1 pb-md-3 pb-lg-4 mb-md-4">Testimonials</h2>
+        <div class="row">
+          <div class="col-md-5 d-none d-md-block">
+            <div class="card h-100 border-0 overflow-hidden px-md-4">
+              <span
+                class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"
+              ></span>
+              <div
+                class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4"
+              >
+                <h2 class="h1 text-center text-md-start p-lg-4">
+                  What Clients Say About Edocew
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="card border-0 shadow-sm p-4 p-xxl-5">
+              <div class="d-flex justify-content-between pb-4 mb-2">
+                <span
+                  class="btn btn-icon btn-primary btn-lg shadow-primary pe-none"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+              </div>
+
+              <div class="swiper-wrapper">
+                <!-- Item -->
+                <div class="swiper-slide h-auto">
+                  <figure
+                    class="card h-100 position-relative border-0 bg-transparent"
+                  >
+                    <blockquote class="card-body p-0 mb-0">
+                      <p class="fs-lg mb-0">
+                        Vestibulum nunc lectus auctor quis. Natoque lectus
+                        tortor lacus, eu. Nunc feugiat nisl maecenas nulla hac
+                        morbi. Vitae, donec facilisis sed nunc netus. Venenatis
+                        posuere faucibus enim est. Vel dignissim morbi blandit
+                        morbi tellus. Arcu ullamcorper quis enim.
+                      </p>
+                    </blockquote>
+                    <figcaption
+                      class="card-footer border-0 d-flex align-items-center w-100 pb-2"
+                    >
+                      <img
+                        src="assets/img/kylee120x120.jpg"
+                        width="60"
+                        class="rounded-circle"
+                        alt="Ralph Edwards"
+                      />
+                      <div class="ps-3">
+                        <h6 class="fw-semibold lh-base mb-0">Kylee Hanhold</h6>
+                        <span class="fs-sm text-muted"
+                          >Owner | Stylist at Shirley Sei Bella
+                        </span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="container mb-f py-5" id="process">
+        <h2 class="h1 pb-md-3 pb-lg-4 mb-md-4">Our Process</h2>
+        <p>
+          Edocew is a web development studio, we rely on web designers or
+          pre-built website designs. Why does this benefit you? Let us explain.
+          When you decide to purchase a home you can decide to accomplish it in
+          one of two ways:
+        </p>
+        <ol>
+          <li>
+            Hire an architect and build a custom home that is one of a kind.
+          </li>
+          <li>
+            Buy a set of home plans that are already designed from a “design”
+            firm or from a building contractor who’s already purchased them
+          </li>
+        </ol>
+        <p>
+          Why would you want to work with pre-existing website design plans?
+          First, it’s less expensive. A good web designer can charge from $1,500
+          to hundreds of thousands of dollars for a bespoke design. Pre-built
+          website designs can usually be purchased for less than $100. Second,
+          is time to value. Working with a designer takes time, and the longer
+          it takes, the longer you’re delaying your time to value. Most small
+          businesses are short on time and money, so we believe that working
+          with the hundreds of established web designs available is the best use
+          of your time and money.
+        </p>
+        <div class="steps steps-sm pt-4">
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">1</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Project Discovery and Scoping</h4>
+              <p class="mb-0">
+                We will establish a meeting where we will get to know each other
+                and initiate our working relationship. Additionally we will
+                discuss your project, including success criteria, desired
+                outcomes, target customer profile, and overall budgets.
+              </p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>Web site requirements</li>
+                    <li>Project timelines</li>
+                    <li>Stakeholders involved</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>Services desired</li>
+                    <li>Methodology overview</li>
+                    <li>Review and delivery of design options</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">2</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Proposal Generation and Presentation</h4>
+              <p class="mb-0">
+                After project discovery and scoping we will generate a proposal
+                for you to review. We will establish a follow up meeting to
+                review all elements of the engagement. The proposal will include
+                the following information.
+              </p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>Project scope details including</li>
+                    <ul>
+                      <li>Design choice</li>
+                      <li>In scope services</li>
+                      <li>Timelines</li>
+                      <li>Hosting details</li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>Pricing and payment terms</li>
+                    <li>Billing milestones</li>
+                    <li>Project assumptions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">3</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Website Prototype Generation</h4>
+              <p class="mb-0">
+                After receiving your content and images, or image selections are
+                finalized, we will begin the prototype phase of your project. A
+                no-code / low-code mockup will be created that includes all
+                client provided verbiage and images. The following steps occur
+                in this phase:
+              </p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>Initial prototype generation</li>
+                    <li>
+                      Up to three (3) revisions of text, images, or site color
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>Final website mock-up in image or PDF format</li>
+                    <li>Protype acceptance and sign off</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">4</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Website Development and Testing</h4>
+              <p class="mb-0">
+                We take all of the individual graphic elements from the
+                prototype and build your website. This includes both the desktop
+                view and the mobile responsive views, ensuring that your site is
+                accessible to as large an audience as possible. Additional steps
+                taken during this step include:
+              </p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>
+                      Google Lighthouse testing to ensure proper search engine
+                      optimization (SEO) and speed
+                    </li>
+                    <li>Mobile device testing including phones and tablets</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>
+                      The development website is hosted on our servers for your
+                      review
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">5</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Add-on Configuration (Optional)</h4>
+              <p class="mb-0">
+                If you need additional help with web hosting or web related
+                services, the following elements will be integrated after
+                initial development efforts have been completed.
+              </p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>Website hosting and deployment</li>
+                    <li>Google Analytics to track user engagement</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>Domain registration and configuration</li>
+                    <li>Website monitoring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">6</div>
+            </div>
+            <div class="step-body" style="width: 100%">
+              <h4 class="mb-2">Website Handoff</h4>
+              <p class="mb-0">This is when we conclude the project.</p>
+              <div class="row justify-content-center pt-4">
+                <div class="col offset-md-2">
+                  <ul>
+                    <li>Bundle up source code in zip file and email to you</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul>
+                    <li>Final payment is made</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">
+              <div class="step-number-inner">7</div>
+            </div>
+            <div class="step-body">
+              <h4 class="mb-2">Website Maintenance</h4>
+              <p class="mb-0">
+                Once your site is launched, that doesn’t mean that all the work
+                is over. One way to bring repeat visitors to your site is to
+                offer updated content on a regular basis. If you don’t feel
+                comfortable running the upgrades yourself, and/or you prefer to
+                better spend your time running your business instead of worrying
+                about your website, We will be more than happy to continue
+                working together with you to keep your website up to date.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="bg-secondary py-5 my-md-2 my-lg-4 my-xl-5" id="portfolio">
+        <div class="container">
+          <!-- Page title + Filters -->
+          <div
+            class="d-lg-flex align-items-center justify-content-between py-4 mt-lg-2"
+          >
+            <h1 class="me-3">Portfolio</h1>
+          </div>
+
+          <!-- Courses grid -->
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gx-md-4 mt-n2 mt-sm-0"
+          >
+            <!-- Item myPRs -->
+            <div class="col pb-1 pb-lg-3 mb-4">
+              <div class="card card-hover">
+                <img
+                  src="assets/img/portfolio/list/myPRs624x360.png"
+                  class="card-img-top"
+                  alt="Card image"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myPRsModal"
+                  style="cursor: pointer"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-3">HTML | CSS </span>
+                  <span class="badge bg-primary mb-3">React</span>
+                  <span class="badge bg-primary mb-3"
+                    >Node.js | Express | MongoDB</span
+                  >
+                  <h5 class="card-title">My PRs</h5>
+                  <p class="card-text fs-sm">
+                    Mobile web application to track gym person records. Hosted
+                    on Heroku.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myPRsModal"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Shirley Sei Bella -->
+            <div class="col pb-1 pb-lg-3 mb-4">
+              <div class="card card-hover">
+                <img
+                  src="assets/img/portfolio/list/ssb624x360.png"
+                  class="card-img-top"
+                  alt="Card image"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ssbModal"
+                  style="cursor: pointer"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-3"
+                    >HTML | CSS | Bootstrap</span
+                  >
+                  <span class="badge bg-primary mb-3">JavaScript</span>
+                  <h5 class="card-title">Shirley Sei Bella</h5>
+                  <p class="card-text fs-sm">
+                    Static business multi-page website for a salon. Mobile
+                    friendly.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ssbModal"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Retail Backbone -->
+            <div class="col pb-1 pb-lg-3 mb-4">
+              <div class="card card-hover">
+                <img
+                  src="assets/img/portfolio/list/rb624x360.png"
+                  class="card-img-top"
+                  alt="Card image"
+                  data-bs-toggle="modal"
+                  data-bs-target="#rbModal"
+                  style="cursor: pointer"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-3"
+                    >HTML | CSS | Bootstrap</span
+                  >
+                  <span class="badge bg-primary mb-3">JavaScript</span>
+                  <h5 class="card-title">Retail Backbone</h5>
+                  <p class="card-text fs-sm">
+                    Static business multi-page website for a software company.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#rbModal"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Diaper Buddy -->
+            <div class="col pb-1 pb-lg-3 mb-4">
+              <div class="card card-hover">
+                <img
+                  src="assets/img/portfolio/list/diaperBuddy624x360.png"
+                  class="card-img-top"
+                  alt="Card image"
+                  data-bs-toggle="modal"
+                  data-bs-target="#diaperBuddyModal"
+                  style="cursor: pointer"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-3">HTML | CSS </span>
+                  <span class="badge bg-primary mb-3">React</span>
+                  <span class="badge bg-primary mb-3"
+                    >Node.js | Express | MongoDB</span
+                  >
+                  <h5 class="card-title">Diaper Buddy</h5>
+                  <p class="card-text fs-sm">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#diaperBuddyModal"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Unwind Salon -->
+            <div class="col pb-1 pb-lg-3 mb-4">
+              <div class="card card-hover">
+                <img
+                  src="assets/img/portfolio/list/unwind624x360.png"
+                  class="card-img-top"
+                  alt="Card image"
+                  data-bs-toggle="modal"
+                  data-bs-target="#unwindModal"
+                  style="cursor: pointer"
+                />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-3"
+                    >HTML | CSS | Bootstrap</span
+                  >
+                  <span class="badge bg-primary mb-3">Node.js | Express</span>
+                  <h5 class="card-title">Unwind Salon</h5>
+                  <p class="card-text fs-sm">
+                    This site is a fictitious company demonstrating an example
+                    of a single page website.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#unwindModal"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MyPRs Modal -->
+        <div class="modal fade" id="myPRsModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Main content + Sidebar -->
+              <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                <div class="row gy-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h2 class="h4 mb-4 pb-2">MyPRs</h2>
+
+                    <!-- Image -->
+                    <div class="gallery mb-4 pb-2">
+                      <div class="rounded-3">
+                        <img
+                          class="rounded-3"
+                          src="assets/img/portfolio/single/myPrs1118x630.png"
+                          alt="Gallery thumbnail"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="mb-4 pb-2">
+                      This application is a mobile friendly website that tracks
+                      fitness personal records. A user can create an account and
+                      log into the application to record fitness goals. myPRs
+                      has three categories of movements: Lifts, Cardio and
+                      Skills. The application is already loaded with predefined
+                      movements in each category and the user can create new
+                      movements to add to their list. Within each specific
+                      movement, the user can add new 1 rep max logs, edit the
+                      log or delete it. I was inspired to create this project
+                      because I needed a way to track my own fitness personal
+                      records with a specific, easy to use application. There
+                      are many other beautiful fitness application on the market
+                      but they tend to get very busy with too many options and I
+                      just wanted a simple quick way to look at my person
+                      fitness records.
+                    </p>
+
+                    <p class="mb-4 pb-2">
+                      My focus on this project was to build the frontend in
+                      React. Node.js is being used for the backend and MongoDB
+                      for the database. I used Balsamiq to wireframe my design
+                      and lucid charts to map out my data. Postman was used to
+                      test all of my endpoints throughout development.
+                    </p>
+
+                    <h4 class="h6">
+                      <i
+                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                      ></i>
+                      FEATURES
+                    </h4>
+                    <ul class="mb-4 pb-2 ps-4">
+                      <li class="mb-1">Login / Sign Up Form</li>
+                      <li class="mb-1">Reset Password</li>
+                      <li class="mb-1">Forgot Password</li>
+                      <li class="mb-1">Contact Support</li>
+                      <li class="mb-1">Data Storage</li>
+                    </ul>
+
+                    <!-- Tags -->
+                    <hr class="mb-4" />
+                    <div
+                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                    >
+                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                        Similar Projects:
+                      </h6>
+                      <div>
+                        <span class="badge bg-secondary shadow-secondary"
+                          >DiaperBuddy</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar -->
+                  <div class="col-lg-4 position-relative">
+                    <div
+                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                      style="top: 105px !important"
+                    >
+                      <span class="d-block mb-3">Tech Details</span>
+                      <div>
+                        <h6>Type of Project:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Mobile First Web App
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Hosting Platform:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Heroku
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Tech Stack:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              HTML | CSS
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              React
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Node.js | Express
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              MongoDB
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Role:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Fullstack
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>URL:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              <a href="https://www.myprs.net" target="_blank"
+                                >https://www.myprs.net</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- RetailBackbone Modal -->
+        <div class="modal fade" id="rbModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Main content + Sidebar -->
+              <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                <div class="row gy-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h2 class="h4 mb-4 pb-2">Retail Backbone</h2>
+
+                    <!-- Image -->
+                    <div class="gallery mb-4 pb-2">
+                      <div class="rounded-3">
+                        <img
+                          class="rounded-3"
+                          src="assets/img/portfolio/single/rb1118x630.png"
+                          alt="Gallery thumbnail"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="mb-4 pb-2">
+                      This application is a mobile friendly website that tracks
+                      fitness personal records. A user can create an account and
+                      log into the application to record fitness goals. myPRs
+                      has three categories of movements: Lifts, Cardio and
+                      Skills. The application is already loaded with predefined
+                      movements in each category and the user can create new
+                      movements to add to their list. Within each specific
+                      movement, the user can add new 1 rep max logs, edit the
+                      log or delete it. I was inspired to create this project
+                      because I needed a way to track my own fitness personal
+                      records with a specific, easy to use application. There
+                      are many other beautiful fitness application on the market
+                      but they tend to get very busy with too many options and I
+                      just wanted a simple quick way to look at my person
+                      fitness records.
+                    </p>
+
+                    <p class="mb-4 pb-2">
+                      My focus on this project was to build the frontend in
+                      React. Node.js is being used for the backend and MongoDB
+                      for the database. I used Balsamiq to wireframe my design
+                      and lucid charts to map out my data. Postman was used to
+                      test all of my endpoints throughout development.
+                    </p>
+
+                    <h4 class="h6">
+                      <i
+                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                      ></i>
+                      FEATURES
+                    </h4>
+                    <ul class="mb-4 pb-2 ps-4">
+                      <li class="mb-1">Responsive Design</li>
+                      <li class="mb-1">Google Analytics</li>
+                      <li class="mb-1">Contact Form</li>
+                      <li class="mb-1">Demo Videos</li>
+                    </ul>
+
+                    <!-- Tags -->
+                    <hr class="mb-4" />
+                    <div
+                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                    >
+                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                        Similar Projects:
+                      </h6>
+                      <div>
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Shirley Sei Bella</span
+                        >
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Unwind</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar -->
+                  <div class="col-lg-4 position-relative">
+                    <div
+                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                      style="top: 105px !important"
+                    >
+                      <span class="d-block mb-3">Tech Details</span>
+                      <div>
+                        <h6>Type of Project:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Responsive Website
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Hosting Platform:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Client Hosted
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Tech Stack:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              HTML | CSS
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Bootstrap
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              JavaScript
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Role:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Frontend Developer
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>URL:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              <a
+                                href="https://retailbackbone.com/"
+                                target="_blank"
+                                >https://retailbackbone.com/</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shirley Sei Bella  Modal -->
+        <div class="modal fade" id="ssbModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Main content + Sidebar -->
+              <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                <div class="row gy-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h2 class="h4 mb-4 pb-2">Shirley Sei Bella</h2>
+
+                    <!-- Image -->
+                    <div class="gallery mb-4 pb-2">
+                      <div class="rounded-3">
+                        <img
+                          class="rounded-3"
+                          src="assets/img/portfolio/single/ssb1118x630.png"
+                          alt="Gallery thumbnail"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="mb-4 pb-2">
+                      This application is a mobile friendly website that tracks
+                      fitness personal records. A user can create an account and
+                      log into the application to record fitness goals. myPRs
+                      has three categories of movements: Lifts, Cardio and
+                      Skills. The application is already loaded with predefined
+                      movements in each category and the user can create new
+                      movements to add to their list. Within each specific
+                      movement, the user can add new 1 rep max logs, edit the
+                      log or delete it. I was inspired to create this project
+                      because I needed a way to track my own fitness personal
+                      records with a specific, easy to use application. There
+                      are many other beautiful fitness application on the market
+                      but they tend to get very busy with too many options and I
+                      just wanted a simple quick way to look at my person
+                      fitness records.
+                    </p>
+
+                    <p class="mb-4 pb-2">
+                      My focus on this project was to build the frontend in
+                      React. Node.js is being used for the backend and MongoDB
+                      for the database. I used Balsamiq to wireframe my design
+                      and lucid charts to map out my data. Postman was used to
+                      test all of my endpoints throughout development.
+                    </p>
+
+                    <h4 class="h6">
+                      <i
+                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                      ></i>
+                      FEATURES
+                    </h4>
+                    <ul class="mb-4 pb-2 ps-4">
+                      <li class="mb-1">Responsive Design</li>
+                      <li class="mb-1">Mobile Friendly</li>
+                      <li class="mb-1">Google Analytics</li>
+                      <li class="mb-1">Website Hosting</li>
+                      <li class="mb-1">Domain Registration</li>
+                    </ul>
+
+                    <!-- Tags -->
+                    <hr class="mb-4" />
+                    <div
+                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                    >
+                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                        Similar Projects:
+                      </h6>
+                      <div>
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Retail Backbone</span
+                        >
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Unwind</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar -->
+                  <div class="col-lg-4 position-relative">
+                    <div
+                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                      style="top: 105px !important"
+                    >
+                      <span class="d-block mb-3">Tech Details</span>
+                      <div>
+                        <h6>Type of Project:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Mobile First Website
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Hosting Platform:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Heroku
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Tech Stack:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              HTML | CSS
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Bootstrap
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              JavaScript
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Role:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Frontend Developer
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>URL:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              <a
+                                href="http://www.shirleyseibella.com/index.html"
+                                target="_blank"
+                                >http://www.shirleyseibella.com</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unwind Modal -->
+        <div class="modal fade" id="unwindModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Main content + Sidebar -->
+              <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                <div class="row gy-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h2 class="h4 mb-4 pb-2">Unwind Salon</h2>
+
+                    <!-- Image -->
+                    <div class="gallery mb-4 pb-2">
+                      <div class="rounded-3">
+                        <img
+                          class="rounded-3"
+                          src="assets/img/portfolio/single/unwind1118x630.png"
+                          alt="Gallery thumbnail"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="mb-4 pb-2">
+                      This application is a mobile friendly website that tracks
+                      fitness personal records. A user can create an account and
+                      log into the application to record fitness goals. myPRs
+                      has three categories of movements: Lifts, Cardio and
+                      Skills. The application is already loaded with predefined
+                      movements in each category and the user can create new
+                      movements to add to their list. Within each specific
+                      movement, the user can add new 1 rep max logs, edit the
+                      log or delete it. I was inspired to create this project
+                      because I needed a way to track my own fitness personal
+                      records with a specific, easy to use application. There
+                      are many other beautiful fitness application on the market
+                      but they tend to get very busy with too many options and I
+                      just wanted a simple quick way to look at my person
+                      fitness records.
+                    </p>
+
+                    <p class="mb-4 pb-2">
+                      My focus on this project was to build the frontend in
+                      React. Node.js is being used for the backend and MongoDB
+                      for the database. I used Balsamiq to wireframe my design
+                      and lucid charts to map out my data. Postman was used to
+                      test all of my endpoints throughout development.
+                    </p>
+
+                    <h4 class="h6">
+                      <i
+                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                      ></i>
+                      FEATURES
+                    </h4>
+                    <ul class="mb-4 pb-2 ps-4">
+                      <li class="mb-1">Responsive Design</li>
+                      <li class="mb-1">Contact Form</li>
+                    </ul>
+
+                    <!-- Tags -->
+                    <hr class="mb-4" />
+                    <div
+                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                    >
+                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                        Similar Projects:
+                      </h6>
+                      <div>
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Shirley Sei Bella</span
+                        >
+                        <span class="badge bg-secondary shadow-secondary"
+                          >Retail Backbone</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar -->
+                  <div class="col-lg-4 position-relative">
+                    <div
+                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                      style="top: 105px !important"
+                    >
+                      <span class="d-block mb-3">Tech Details</span>
+                      <div>
+                        <h6>Type of Project:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Responsive Website
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Hosting Platform:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Heroku
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Tech Stack:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              HTML | CSS
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Bootstrap
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              JavaScript
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Node.js | Express
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Role:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Fullstack
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>URL:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              <a href="#" target="_blank">need...</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diaper Buddy Modal -->
+        <div
+          class="modal fade"
+          id="diaperBuddyModal"
+          tabindex="-1"
+          role="dialog"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Main content + Sidebar -->
+              <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                <div class="row gy-4">
+                  <!-- Main Content -->
+                  <div class="col-lg-8">
+                    <h2 class="h4 mb-4 pb-2">Diaper Buddy</h2>
+
+                    <!-- Image -->
+                    <div class="gallery mb-4 pb-2">
+                      <div class="rounded-3">
+                        <img
+                          class="rounded-3"
+                          src="assets/img/portfolio/single/diaperbuddy1118x630.png"
+                          alt="Gallery thumbnail"
+                        />
+                      </div>
+                    </div>
+
+                    <p class="mb-4 pb-2">
+                      This application is a mobile friendly website that tracks
+                      fitness personal records. A user can create an account and
+                      log into the application to record fitness goals. myPRs
+                      has three categories of movements: Lifts, Cardio and
+                      Skills. The application is already loaded with predefined
+                      movements in each category and the user can create new
+                      movements to add to their list. Within each specific
+                      movement, the user can add new 1 rep max logs, edit the
+                      log or delete it. I was inspired to create this project
+                      because I needed a way to track my own fitness personal
+                      records with a specific, easy to use application. There
+                      are many other beautiful fitness application on the market
+                      but they tend to get very busy with too many options and I
+                      just wanted a simple quick way to look at my person
+                      fitness records.
+                    </p>
+
+                    <p class="mb-4 pb-2">
+                      My focus on this project was to build the frontend in
+                      React. Node.js is being used for the backend and MongoDB
+                      for the database. I used Balsamiq to wireframe my design
+                      and lucid charts to map out my data. Postman was used to
+                      test all of my endpoints throughout development.
+                    </p>
+
+                    <h4 class="h6">
+                      <i
+                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                      ></i>
+                      FEATURES
+                    </h4>
+                    <ul class="mb-4 pb-2 ps-4">
+                      <li class="mb-1">Login / Sign Up Form</li>
+                      <li class="mb-1">Reset Password</li>
+                      <li class="mb-1">Forgot Password</li>
+                      <li class="mb-1">Contact Support</li>
+                      <li class="mb-1">Data Storage</li>
+                      <li class="mb-1">Data Graphs</li>
+                      <li class="mb-1">Swiper Cards</li>
+                      <li class="mb-1">Photo Upload</li>
+                    </ul>
+
+                    <!-- Tags -->
+                    <hr class="mb-4" />
+                    <div
+                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                    >
+                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                        Similar Projects:
+                      </h6>
+                      <div>
+                        <span class="badge bg-secondary shadow-secondary"
+                          >MyPRs</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar -->
+                  <div class="col-lg-4 position-relative">
+                    <div
+                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                      style="top: 105px !important"
+                    >
+                      <span class="d-block mb-3">Tech Details</span>
+                      <div>
+                        <h6>Type of Project:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Mobile First Web App
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Hosting Platform:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Heroku
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Tech Stack:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              HTML | CSS
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              React
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Node.js | Express
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              MongoDB
+                            </li>
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Amazon S3
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>Role:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              Fullstack
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h6>URL:</h6>
+                        <div class="mb-4">
+                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                            <li class="d-flex mb-2">
+                              <i
+                                class="bx bx-right-arrow-alt text-primary me-1"
+                                style="margin-top: 0.25rem"
+                              ></i>
+                              <a
+                                href="https://diaper-buddy.herokuapp.com/"
+                                target="_blank"
+                                >https://diaper-buddy.herokuapp.com/</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="container py-lg-4 py-xl-5 mt-3 mb-5" id="about">
+        <h2 class="h1 pb-md-3 pb-lg-4 mb-md-4">About</h2>
+        <div
+          class="row g-0 bg-dark bg-repeat-0 bg-position-center border rounded-3 overflow-hidden"
+          style="
+            background-image: url(assets/img/portfolio/courses/author-pattern.svg);
+          "
+        >
+          <div
+            class="col-md-5 bg-repeat-0 bg-position-top-center bg-size-cover"
+            style="
+              background-image: url(assets/img/lindsay1052x1136.png);
+              min-height: 350px;
+            "
+          ></div>
+          <div class="col-md-7 py-xl-5 px-4">
+            <div class="py-5 mx-auto" style="max-width: 530px">
+              <div class="fs-xl text-light opacity-50 mb-2">About Edocew</div>
+              <h2 class="h1 text-light mb-4">Lindsay Aiello</h2>
+              <p class="text-light opacity-70 pb-4">
+                I have 5 years experience developing beautiful websites and
+                applications. I pride myself with having excellent communication
+                skills and attention to detail. Whether you know exactly what
+                you want or are just getting started, let's build your business
+                website together.
+              </p>
+              <div>
+                <h3 class="h2 text-light mb-4">Certificates</h3>
+                <ul
+                  class="list-unstyled lead fw-medium text-light opacity-70 bx-ul"
+                  style="font-size: 1rem"
+                >
+                  <li class="d-flex mb-2">
+                    <i class="bx bx-badge-check text-primary me-2"></i>
+                    Interactivity with JavaScript - University of Michigan
+                  </li>
+                  <li class="d-flex mb-2">
+                    <i class="bx bx-badge-check text-primary me-1"></i>
+                    Google Analytics
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page content -->
+      <section
+        class="bg-size-cover bg-position-bottom-center bg-repeat-0 py-5"
+        style="background-image: url(assets/img/contacts/bg.svg)"
+        id="contact"
+      >
+        <div class="container pt-5 pb-lg-4 pb-xl-5">
+          <div class="row pt-md-2 pt-lg-5 pb-2 pb-md-4">
+            <div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
+              <h1 class="h3 mb-2">Want to work with us?</h1>
+              <h2 class="display-1 pb-sm-2 pb-md-3 mb-3" style="color: #d719ff">
+                Let's talk!
+              </h2>
+              <div class="nav d-block lead pt-lg-5" style="font-size: 16px">
+                <a
+                  href="#"
+                  class="nav-link fw-normal text-decoration-underline p-0 mb-4"
+                  >contact@edocew.com</a
+                >
+                <div class="text-nav">734-408-1705</div>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 offset-xl-1 offset-xxl-2 pt-3 pt-md-4 pt-lg-3 mt-3"
+            >
+              <form class="needs-validation" novalidate>
+                <div class="row g-4">
+                  <div class="col-sm-6">
+                    <label for="fn" class="form-label fs-base">Full name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="fn"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your full name!
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="email" class="form-label fs-base">Email</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please provide a valid email address!
+                    </div>
+                  </div>
+                  <div class="col-12 pb-2">
+                    <label for="message" class="form-label fs-base"
+                      >Message</label
+                    >
+                    <textarea
+                      class="form-control form-control-lg"
+                      id="message"
+                      rows="3"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Please provide a valid email address!
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-primary w-100 w-sm-auto"
+                    >
+                      Contact Us
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img
+                src="assets/img/edocew_logo_dark.png"
+                width="130"
+                alt="edocew"
+              />
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">
+              Edocew prides itself on being easy to work with and providing
+              services that small to medium size businesses need. It’s our
+              business to help your business grow!
+            </p>
+          </div>
+          <div
+            class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"
+          >
+            <div id="footer-links" class="row">
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Page Links</h6>
+                <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                  <li class="nav-item">
+                    <a
+                      href="#services"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#testimonials"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll
+                      >Testimonials</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#process"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll
+                      >Process</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#portfolio"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="#about"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll
+                      >About</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Social</h6>
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      href="https://www.linkedin.com/in/lindsay-aiello/"
+                      target="blank"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      >LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Us</h6>
+
+                <ul class="nav flex-column mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      href="mailto:contact@edocew.com"
+                      class="d-inline-block px-0 pt-1 pb-2 fw-medium"
+                      >contact@edocew.com</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="tel:+1-734-408-1705"
+                      class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      >734-408-1705</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
