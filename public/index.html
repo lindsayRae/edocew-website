@@ -264,6 +264,7 @@
           </a>
         </div>
       </header>
+
       <!-- Hero -->
       <section
         class="overflow-hidden pt-5"
@@ -716,7 +717,6 @@
       </section>
 
       <!-- Testimonials -->
-
       <section class="container py-5 my-md-2 my-lg-4 my-xl-5" id="testimonials">
         <h2 class="h1 pb-md-3 pb-lg-4 mb-md-4">Testimonials</h2>
         <div class="row">
@@ -1196,184 +1196,204 @@
         <div class="modal fade" id="myPRsModal" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-              <!-- Main content + Sidebar -->
-              <section class="container mb-5 pt-4 pb-2 py-mg-4">
-                <div class="row gy-4">
-                  <!-- Main Content -->
-                  <div class="col-lg-8">
-                    <h2 class="h4 mb-4 pb-2">MyPRs</h2>
+              <div class="modal-header">
+                <h5 class="modal-title">MyPRs</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Main content + Sidebar -->
+                <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                  <div class="row gy-4">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                      <!-- <h2 class="h4 mb-4 pb-2">MyPRs</h2> -->
 
-                    <!-- Image -->
-                    <div class="gallery mb-4 pb-2">
-                      <div class="rounded-3">
-                        <img
-                          class="rounded-3"
-                          src="assets/img/portfolio/single/myPrs1118x630.png"
-                          alt="Gallery thumbnail"
-                        />
+                      <!-- Image -->
+                      <div class="gallery mb-4 pb-2">
+                        <div class="rounded-3">
+                          <img
+                            class="rounded-3"
+                            src="assets/img/portfolio/single/myPrs1118x630.png"
+                            alt="Gallery thumbnail"
+                          />
+                        </div>
+                      </div>
+
+                      <p class="mb-4 pb-2">
+                        This application is a mobile friendly website that
+                        tracks fitness personal records. A user can create an
+                        account and log into the application to record fitness
+                        goals. myPRs has three categories of movements: Lifts,
+                        Cardio and Skills. The application is already loaded
+                        with predefined movements in each category and the user
+                        can create new movements to add to their list. Within
+                        each specific movement, the user can add new 1 rep max
+                        logs, edit the log or delete it. I was inspired to
+                        create this project because I needed a way to track my
+                        own fitness personal records with a specific, easy to
+                        use application. There are many other beautiful fitness
+                        application on the market but they tend to get very busy
+                        with too many options and I just wanted a simple quick
+                        way to look at my person fitness records.
+                      </p>
+
+                      <p class="mb-4 pb-2">
+                        My focus on this project was to build the frontend in
+                        React. Node.js is being used for the backend and MongoDB
+                        for the database. I used Balsamiq to wireframe my design
+                        and lucid charts to map out my data. Postman was used to
+                        test all of my endpoints throughout development.
+                      </p>
+
+                      <h4 class="h6">
+                        <i
+                          class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                        ></i>
+                        FEATURES
+                      </h4>
+                      <ul class="mb-4 pb-2 ps-4">
+                        <li class="mb-1">Login / Sign Up Form</li>
+                        <li class="mb-1">Reset Password</li>
+                        <li class="mb-1">Forgot Password</li>
+                        <li class="mb-1">Contact Support</li>
+                        <li class="mb-1">Data Storage</li>
+                      </ul>
+
+                      <!-- Tags -->
+                      <hr class="mb-4" />
+                      <div
+                        class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                      >
+                        <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                          Similar Projects:
+                        </h6>
+                        <div>
+                          <span class="badge bg-secondary shadow-secondary"
+                            >DiaperBuddy</span
+                          >
+                        </div>
                       </div>
                     </div>
 
-                    <p class="mb-4 pb-2">
-                      This application is a mobile friendly website that tracks
-                      fitness personal records. A user can create an account and
-                      log into the application to record fitness goals. myPRs
-                      has three categories of movements: Lifts, Cardio and
-                      Skills. The application is already loaded with predefined
-                      movements in each category and the user can create new
-                      movements to add to their list. Within each specific
-                      movement, the user can add new 1 rep max logs, edit the
-                      log or delete it. I was inspired to create this project
-                      because I needed a way to track my own fitness personal
-                      records with a specific, easy to use application. There
-                      are many other beautiful fitness application on the market
-                      but they tend to get very busy with too many options and I
-                      just wanted a simple quick way to look at my person
-                      fitness records.
-                    </p>
-
-                    <p class="mb-4 pb-2">
-                      My focus on this project was to build the frontend in
-                      React. Node.js is being used for the backend and MongoDB
-                      for the database. I used Balsamiq to wireframe my design
-                      and lucid charts to map out my data. Postman was used to
-                      test all of my endpoints throughout development.
-                    </p>
-
-                    <h4 class="h6">
-                      <i
-                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
-                      ></i>
-                      FEATURES
-                    </h4>
-                    <ul class="mb-4 pb-2 ps-4">
-                      <li class="mb-1">Login / Sign Up Form</li>
-                      <li class="mb-1">Reset Password</li>
-                      <li class="mb-1">Forgot Password</li>
-                      <li class="mb-1">Contact Support</li>
-                      <li class="mb-1">Data Storage</li>
-                    </ul>
-
-                    <!-- Tags -->
-                    <hr class="mb-4" />
-                    <div
-                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
-                    >
-                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
-                        Similar Projects:
-                      </h6>
-                      <div>
-                        <span class="badge bg-secondary shadow-secondary"
-                          >DiaperBuddy</span
-                        >
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 position-relative">
+                      <div
+                        class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                        style="top: 105px !important"
+                      >
+                        <span class="d-block mb-3">Tech Details</span>
+                        <div>
+                          <h6>Type of Project:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Mobile First Web App
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Hosting Platform:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Heroku
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Tech Stack:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                HTML | CSS
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                React
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Node.js | Express
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                MongoDB
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Role:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Fullstack
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>URL:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                <a href="https://www.myprs.net" target="_blank"
+                                  >https://www.myprs.net</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Sidebar -->
-                  <div class="col-lg-4 position-relative">
-                    <div
-                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
-                      style="top: 105px !important"
-                    >
-                      <span class="d-block mb-3">Tech Details</span>
-                      <div>
-                        <h6>Type of Project:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Mobile First Web App
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Hosting Platform:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Heroku
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Tech Stack:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              HTML | CSS
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              React
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Node.js | Express
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              MongoDB
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Role:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Fullstack
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>URL:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              <a href="https://www.myprs.net" target="_blank"
-                                >https://www.myprs.net</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1382,181 +1402,199 @@
         <div class="modal fade" id="rbModal" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-              <!-- Main content + Sidebar -->
-              <section class="container mb-5 pt-4 pb-2 py-mg-4">
-                <div class="row gy-4">
-                  <!-- Main Content -->
-                  <div class="col-lg-8">
-                    <h2 class="h4 mb-4 pb-2">Retail Backbone</h2>
+              <div class="modal-header">
+                <h5 class="modal-title">Retail Backbone</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Main content + Sidebar -->
+                <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                  <div class="row gy-4">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                      <!-- Image -->
+                      <div class="gallery mb-4 pb-2">
+                        <div class="rounded-3">
+                          <img
+                            class="rounded-3"
+                            src="assets/img/portfolio/single/rb1118x630.png"
+                            alt="Gallery thumbnail"
+                          />
+                        </div>
+                      </div>
 
-                    <!-- Image -->
-                    <div class="gallery mb-4 pb-2">
-                      <div class="rounded-3">
-                        <img
-                          class="rounded-3"
-                          src="assets/img/portfolio/single/rb1118x630.png"
-                          alt="Gallery thumbnail"
-                        />
+                      <p class="mb-4 pb-2">
+                        This application is a mobile friendly website that
+                        tracks fitness personal records. A user can create an
+                        account and log into the application to record fitness
+                        goals. myPRs has three categories of movements: Lifts,
+                        Cardio and Skills. The application is already loaded
+                        with predefined movements in each category and the user
+                        can create new movements to add to their list. Within
+                        each specific movement, the user can add new 1 rep max
+                        logs, edit the log or delete it. I was inspired to
+                        create this project because I needed a way to track my
+                        own fitness personal records with a specific, easy to
+                        use application. There are many other beautiful fitness
+                        application on the market but they tend to get very busy
+                        with too many options and I just wanted a simple quick
+                        way to look at my person fitness records.
+                      </p>
+
+                      <p class="mb-4 pb-2">
+                        My focus on this project was to build the frontend in
+                        React. Node.js is being used for the backend and MongoDB
+                        for the database. I used Balsamiq to wireframe my design
+                        and lucid charts to map out my data. Postman was used to
+                        test all of my endpoints throughout development.
+                      </p>
+
+                      <h4 class="h6">
+                        <i
+                          class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                        ></i>
+                        FEATURES
+                      </h4>
+                      <ul class="mb-4 pb-2 ps-4">
+                        <li class="mb-1">Responsive Design</li>
+                        <li class="mb-1">Google Analytics</li>
+                        <li class="mb-1">Contact Form</li>
+                        <li class="mb-1">Demo Videos</li>
+                      </ul>
+
+                      <!-- Tags -->
+                      <hr class="mb-4" />
+                      <div
+                        class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                      >
+                        <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                          Similar Projects:
+                        </h6>
+                        <div>
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Shirley Sei Bella</span
+                          >
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Unwind</span
+                          >
+                        </div>
                       </div>
                     </div>
 
-                    <p class="mb-4 pb-2">
-                      This application is a mobile friendly website that tracks
-                      fitness personal records. A user can create an account and
-                      log into the application to record fitness goals. myPRs
-                      has three categories of movements: Lifts, Cardio and
-                      Skills. The application is already loaded with predefined
-                      movements in each category and the user can create new
-                      movements to add to their list. Within each specific
-                      movement, the user can add new 1 rep max logs, edit the
-                      log or delete it. I was inspired to create this project
-                      because I needed a way to track my own fitness personal
-                      records with a specific, easy to use application. There
-                      are many other beautiful fitness application on the market
-                      but they tend to get very busy with too many options and I
-                      just wanted a simple quick way to look at my person
-                      fitness records.
-                    </p>
-
-                    <p class="mb-4 pb-2">
-                      My focus on this project was to build the frontend in
-                      React. Node.js is being used for the backend and MongoDB
-                      for the database. I used Balsamiq to wireframe my design
-                      and lucid charts to map out my data. Postman was used to
-                      test all of my endpoints throughout development.
-                    </p>
-
-                    <h4 class="h6">
-                      <i
-                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
-                      ></i>
-                      FEATURES
-                    </h4>
-                    <ul class="mb-4 pb-2 ps-4">
-                      <li class="mb-1">Responsive Design</li>
-                      <li class="mb-1">Google Analytics</li>
-                      <li class="mb-1">Contact Form</li>
-                      <li class="mb-1">Demo Videos</li>
-                    </ul>
-
-                    <!-- Tags -->
-                    <hr class="mb-4" />
-                    <div
-                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
-                    >
-                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
-                        Similar Projects:
-                      </h6>
-                      <div>
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Shirley Sei Bella</span
-                        >
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Unwind</span
-                        >
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 position-relative">
+                      <div
+                        class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                        style="top: 105px !important"
+                      >
+                        <span class="d-block mb-3">Tech Details</span>
+                        <div>
+                          <h6>Type of Project:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Responsive Website
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Hosting Platform:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Client Hosted
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Tech Stack:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                HTML | CSS
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Bootstrap
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                JavaScript
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Role:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Frontend Developer
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>URL:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                <a
+                                  href="https://retailbackbone.com/"
+                                  target="_blank"
+                                  >https://retailbackbone.com/</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Sidebar -->
-                  <div class="col-lg-4 position-relative">
-                    <div
-                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
-                      style="top: 105px !important"
-                    >
-                      <span class="d-block mb-3">Tech Details</span>
-                      <div>
-                        <h6>Type of Project:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Responsive Website
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Hosting Platform:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Client Hosted
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Tech Stack:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              HTML | CSS
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Bootstrap
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              JavaScript
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Role:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Frontend Developer
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>URL:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              <a
-                                href="https://retailbackbone.com/"
-                                target="_blank"
-                                >https://retailbackbone.com/</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1565,182 +1603,200 @@
         <div class="modal fade" id="ssbModal" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-              <!-- Main content + Sidebar -->
-              <section class="container mb-5 pt-4 pb-2 py-mg-4">
-                <div class="row gy-4">
-                  <!-- Main Content -->
-                  <div class="col-lg-8">
-                    <h2 class="h4 mb-4 pb-2">Shirley Sei Bella</h2>
+              <div class="modal-header">
+                <h5 class="modal-title">Shirley Sei Bella</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Main content + Sidebar -->
+                <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                  <div class="row gy-4">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                      <!-- Image -->
+                      <div class="gallery mb-4 pb-2">
+                        <div class="rounded-3">
+                          <img
+                            class="rounded-3"
+                            src="assets/img/portfolio/single/ssb1118x630.png"
+                            alt="Gallery thumbnail"
+                          />
+                        </div>
+                      </div>
 
-                    <!-- Image -->
-                    <div class="gallery mb-4 pb-2">
-                      <div class="rounded-3">
-                        <img
-                          class="rounded-3"
-                          src="assets/img/portfolio/single/ssb1118x630.png"
-                          alt="Gallery thumbnail"
-                        />
+                      <p class="mb-4 pb-2">
+                        This application is a mobile friendly website that
+                        tracks fitness personal records. A user can create an
+                        account and log into the application to record fitness
+                        goals. myPRs has three categories of movements: Lifts,
+                        Cardio and Skills. The application is already loaded
+                        with predefined movements in each category and the user
+                        can create new movements to add to their list. Within
+                        each specific movement, the user can add new 1 rep max
+                        logs, edit the log or delete it. I was inspired to
+                        create this project because I needed a way to track my
+                        own fitness personal records with a specific, easy to
+                        use application. There are many other beautiful fitness
+                        application on the market but they tend to get very busy
+                        with too many options and I just wanted a simple quick
+                        way to look at my person fitness records.
+                      </p>
+
+                      <p class="mb-4 pb-2">
+                        My focus on this project was to build the frontend in
+                        React. Node.js is being used for the backend and MongoDB
+                        for the database. I used Balsamiq to wireframe my design
+                        and lucid charts to map out my data. Postman was used to
+                        test all of my endpoints throughout development.
+                      </p>
+
+                      <h4 class="h6">
+                        <i
+                          class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                        ></i>
+                        FEATURES
+                      </h4>
+                      <ul class="mb-4 pb-2 ps-4">
+                        <li class="mb-1">Responsive Design</li>
+                        <li class="mb-1">Mobile Friendly</li>
+                        <li class="mb-1">Google Analytics</li>
+                        <li class="mb-1">Website Hosting</li>
+                        <li class="mb-1">Domain Registration</li>
+                      </ul>
+
+                      <!-- Tags -->
+                      <hr class="mb-4" />
+                      <div
+                        class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                      >
+                        <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                          Similar Projects:
+                        </h6>
+                        <div>
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Retail Backbone</span
+                          >
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Unwind</span
+                          >
+                        </div>
                       </div>
                     </div>
 
-                    <p class="mb-4 pb-2">
-                      This application is a mobile friendly website that tracks
-                      fitness personal records. A user can create an account and
-                      log into the application to record fitness goals. myPRs
-                      has three categories of movements: Lifts, Cardio and
-                      Skills. The application is already loaded with predefined
-                      movements in each category and the user can create new
-                      movements to add to their list. Within each specific
-                      movement, the user can add new 1 rep max logs, edit the
-                      log or delete it. I was inspired to create this project
-                      because I needed a way to track my own fitness personal
-                      records with a specific, easy to use application. There
-                      are many other beautiful fitness application on the market
-                      but they tend to get very busy with too many options and I
-                      just wanted a simple quick way to look at my person
-                      fitness records.
-                    </p>
-
-                    <p class="mb-4 pb-2">
-                      My focus on this project was to build the frontend in
-                      React. Node.js is being used for the backend and MongoDB
-                      for the database. I used Balsamiq to wireframe my design
-                      and lucid charts to map out my data. Postman was used to
-                      test all of my endpoints throughout development.
-                    </p>
-
-                    <h4 class="h6">
-                      <i
-                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
-                      ></i>
-                      FEATURES
-                    </h4>
-                    <ul class="mb-4 pb-2 ps-4">
-                      <li class="mb-1">Responsive Design</li>
-                      <li class="mb-1">Mobile Friendly</li>
-                      <li class="mb-1">Google Analytics</li>
-                      <li class="mb-1">Website Hosting</li>
-                      <li class="mb-1">Domain Registration</li>
-                    </ul>
-
-                    <!-- Tags -->
-                    <hr class="mb-4" />
-                    <div
-                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
-                    >
-                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
-                        Similar Projects:
-                      </h6>
-                      <div>
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Retail Backbone</span
-                        >
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Unwind</span
-                        >
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 position-relative">
+                      <div
+                        class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                        style="top: 105px !important"
+                      >
+                        <span class="d-block mb-3">Tech Details</span>
+                        <div>
+                          <h6>Type of Project:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Mobile First Website
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Hosting Platform:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Heroku
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Tech Stack:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                HTML | CSS
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Bootstrap
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                JavaScript
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Role:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Frontend Developer
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>URL:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                <a
+                                  href="http://www.shirleyseibella.com/index.html"
+                                  target="_blank"
+                                  >http://www.shirleyseibella.com</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Sidebar -->
-                  <div class="col-lg-4 position-relative">
-                    <div
-                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
-                      style="top: 105px !important"
-                    >
-                      <span class="d-block mb-3">Tech Details</span>
-                      <div>
-                        <h6>Type of Project:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Mobile First Website
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Hosting Platform:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Heroku
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Tech Stack:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              HTML | CSS
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Bootstrap
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              JavaScript
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Role:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Frontend Developer
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>URL:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              <a
-                                href="http://www.shirleyseibella.com/index.html"
-                                target="_blank"
-                                >http://www.shirleyseibella.com</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1749,182 +1805,200 @@
         <div class="modal fade" id="unwindModal" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-              <!-- Main content + Sidebar -->
-              <section class="container mb-5 pt-4 pb-2 py-mg-4">
-                <div class="row gy-4">
-                  <!-- Main Content -->
-                  <div class="col-lg-8">
-                    <h2 class="h4 mb-4 pb-2">Unwind Salon</h2>
+              <div class="modal-header">
+                <h5 class="modal-title">Unwind Salon</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Main content + Sidebar -->
+                <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                  <div class="row gy-4">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                      <!-- Image -->
+                      <div class="gallery mb-4 pb-2">
+                        <div class="rounded-3">
+                          <img
+                            class="rounded-3"
+                            src="assets/img/portfolio/single/unwind1118x630.png"
+                            alt="Gallery thumbnail"
+                          />
+                        </div>
+                      </div>
 
-                    <!-- Image -->
-                    <div class="gallery mb-4 pb-2">
-                      <div class="rounded-3">
-                        <img
-                          class="rounded-3"
-                          src="assets/img/portfolio/single/unwind1118x630.png"
-                          alt="Gallery thumbnail"
-                        />
+                      <p class="mb-4 pb-2">
+                        This application is a mobile friendly website that
+                        tracks fitness personal records. A user can create an
+                        account and log into the application to record fitness
+                        goals. myPRs has three categories of movements: Lifts,
+                        Cardio and Skills. The application is already loaded
+                        with predefined movements in each category and the user
+                        can create new movements to add to their list. Within
+                        each specific movement, the user can add new 1 rep max
+                        logs, edit the log or delete it. I was inspired to
+                        create this project because I needed a way to track my
+                        own fitness personal records with a specific, easy to
+                        use application. There are many other beautiful fitness
+                        application on the market but they tend to get very busy
+                        with too many options and I just wanted a simple quick
+                        way to look at my person fitness records.
+                      </p>
+
+                      <p class="mb-4 pb-2">
+                        My focus on this project was to build the frontend in
+                        React. Node.js is being used for the backend and MongoDB
+                        for the database. I used Balsamiq to wireframe my design
+                        and lucid charts to map out my data. Postman was used to
+                        test all of my endpoints throughout development.
+                      </p>
+
+                      <h4 class="h6">
+                        <i
+                          class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                        ></i>
+                        FEATURES
+                      </h4>
+                      <ul class="mb-4 pb-2 ps-4">
+                        <li class="mb-1">Responsive Design</li>
+                        <li class="mb-1">Contact Form</li>
+                      </ul>
+
+                      <!-- Tags -->
+                      <hr class="mb-4" />
+                      <div
+                        class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                      >
+                        <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                          Similar Projects:
+                        </h6>
+                        <div>
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Shirley Sei Bella</span
+                          >
+                          <span class="badge bg-secondary shadow-secondary"
+                            >Retail Backbone</span
+                          >
+                        </div>
                       </div>
                     </div>
 
-                    <p class="mb-4 pb-2">
-                      This application is a mobile friendly website that tracks
-                      fitness personal records. A user can create an account and
-                      log into the application to record fitness goals. myPRs
-                      has three categories of movements: Lifts, Cardio and
-                      Skills. The application is already loaded with predefined
-                      movements in each category and the user can create new
-                      movements to add to their list. Within each specific
-                      movement, the user can add new 1 rep max logs, edit the
-                      log or delete it. I was inspired to create this project
-                      because I needed a way to track my own fitness personal
-                      records with a specific, easy to use application. There
-                      are many other beautiful fitness application on the market
-                      but they tend to get very busy with too many options and I
-                      just wanted a simple quick way to look at my person
-                      fitness records.
-                    </p>
-
-                    <p class="mb-4 pb-2">
-                      My focus on this project was to build the frontend in
-                      React. Node.js is being used for the backend and MongoDB
-                      for the database. I used Balsamiq to wireframe my design
-                      and lucid charts to map out my data. Postman was used to
-                      test all of my endpoints throughout development.
-                    </p>
-
-                    <h4 class="h6">
-                      <i
-                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
-                      ></i>
-                      FEATURES
-                    </h4>
-                    <ul class="mb-4 pb-2 ps-4">
-                      <li class="mb-1">Responsive Design</li>
-                      <li class="mb-1">Contact Form</li>
-                    </ul>
-
-                    <!-- Tags -->
-                    <hr class="mb-4" />
-                    <div
-                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
-                    >
-                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
-                        Similar Projects:
-                      </h6>
-                      <div>
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Shirley Sei Bella</span
-                        >
-                        <span class="badge bg-secondary shadow-secondary"
-                          >Retail Backbone</span
-                        >
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 position-relative">
+                      <div
+                        class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                        style="top: 105px !important"
+                      >
+                        <span class="d-block mb-3">Tech Details</span>
+                        <div>
+                          <h6>Type of Project:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Responsive Website
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Hosting Platform:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Heroku
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Tech Stack:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                HTML | CSS
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Bootstrap
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                JavaScript
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Node.js | Express
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Role:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Fullstack
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>URL:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                <a href="#" target="_blank">need...</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Sidebar -->
-                  <div class="col-lg-4 position-relative">
-                    <div
-                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
-                      style="top: 105px !important"
-                    >
-                      <span class="d-block mb-3">Tech Details</span>
-                      <div>
-                        <h6>Type of Project:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Responsive Website
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Hosting Platform:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Heroku
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Tech Stack:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              HTML | CSS
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Bootstrap
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              JavaScript
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Node.js | Express
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Role:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Fullstack
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>URL:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              <a href="#" target="_blank">need...</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1938,196 +2012,214 @@
         >
           <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-              <!-- Main content + Sidebar -->
-              <section class="container mb-5 pt-4 pb-2 py-mg-4">
-                <div class="row gy-4">
-                  <!-- Main Content -->
-                  <div class="col-lg-8">
-                    <h2 class="h4 mb-4 pb-2">Diaper Buddy</h2>
+              <div class="modal-header">
+                <h5 class="modal-title">Diaper Buddy</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Main content + Sidebar -->
+                <section class="container mb-5 pt-4 pb-2 py-mg-4">
+                  <div class="row gy-4">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                      <!-- Image -->
+                      <div class="gallery mb-4 pb-2">
+                        <div class="rounded-3">
+                          <img
+                            class="rounded-3"
+                            src="assets/img/portfolio/single/diaperbuddy1118x630.png"
+                            alt="Gallery thumbnail"
+                          />
+                        </div>
+                      </div>
 
-                    <!-- Image -->
-                    <div class="gallery mb-4 pb-2">
-                      <div class="rounded-3">
-                        <img
-                          class="rounded-3"
-                          src="assets/img/portfolio/single/diaperbuddy1118x630.png"
-                          alt="Gallery thumbnail"
-                        />
+                      <p class="mb-4 pb-2">
+                        This application is a mobile friendly website that
+                        tracks fitness personal records. A user can create an
+                        account and log into the application to record fitness
+                        goals. myPRs has three categories of movements: Lifts,
+                        Cardio and Skills. The application is already loaded
+                        with predefined movements in each category and the user
+                        can create new movements to add to their list. Within
+                        each specific movement, the user can add new 1 rep max
+                        logs, edit the log or delete it. I was inspired to
+                        create this project because I needed a way to track my
+                        own fitness personal records with a specific, easy to
+                        use application. There are many other beautiful fitness
+                        application on the market but they tend to get very busy
+                        with too many options and I just wanted a simple quick
+                        way to look at my person fitness records.
+                      </p>
+
+                      <p class="mb-4 pb-2">
+                        My focus on this project was to build the frontend in
+                        React. Node.js is being used for the backend and MongoDB
+                        for the database. I used Balsamiq to wireframe my design
+                        and lucid charts to map out my data. Postman was used to
+                        test all of my endpoints throughout development.
+                      </p>
+
+                      <h4 class="h6">
+                        <i
+                          class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
+                        ></i>
+                        FEATURES
+                      </h4>
+                      <ul class="mb-4 pb-2 ps-4">
+                        <li class="mb-1">Login / Sign Up Form</li>
+                        <li class="mb-1">Reset Password</li>
+                        <li class="mb-1">Forgot Password</li>
+                        <li class="mb-1">Contact Support</li>
+                        <li class="mb-1">Data Storage</li>
+                        <li class="mb-1">Data Graphs</li>
+                        <li class="mb-1">Swiper Cards</li>
+                        <li class="mb-1">Photo Upload</li>
+                      </ul>
+
+                      <!-- Tags -->
+                      <hr class="mb-4" />
+                      <div
+                        class="d-flex flex-sm-row flex-column pt-2 align-items-center"
+                      >
+                        <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
+                          Similar Projects:
+                        </h6>
+                        <div>
+                          <span class="badge bg-secondary shadow-secondary"
+                            >MyPRs</span
+                          >
+                        </div>
                       </div>
                     </div>
 
-                    <p class="mb-4 pb-2">
-                      This application is a mobile friendly website that tracks
-                      fitness personal records. A user can create an account and
-                      log into the application to record fitness goals. myPRs
-                      has three categories of movements: Lifts, Cardio and
-                      Skills. The application is already loaded with predefined
-                      movements in each category and the user can create new
-                      movements to add to their list. Within each specific
-                      movement, the user can add new 1 rep max logs, edit the
-                      log or delete it. I was inspired to create this project
-                      because I needed a way to track my own fitness personal
-                      records with a specific, easy to use application. There
-                      are many other beautiful fitness application on the market
-                      but they tend to get very busy with too many options and I
-                      just wanted a simple quick way to look at my person
-                      fitness records.
-                    </p>
-
-                    <p class="mb-4 pb-2">
-                      My focus on this project was to build the frontend in
-                      React. Node.js is being used for the backend and MongoDB
-                      for the database. I used Balsamiq to wireframe my design
-                      and lucid charts to map out my data. Postman was used to
-                      test all of my endpoints throughout development.
-                    </p>
-
-                    <h4 class="h6">
-                      <i
-                        class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"
-                      ></i>
-                      FEATURES
-                    </h4>
-                    <ul class="mb-4 pb-2 ps-4">
-                      <li class="mb-1">Login / Sign Up Form</li>
-                      <li class="mb-1">Reset Password</li>
-                      <li class="mb-1">Forgot Password</li>
-                      <li class="mb-1">Contact Support</li>
-                      <li class="mb-1">Data Storage</li>
-                      <li class="mb-1">Data Graphs</li>
-                      <li class="mb-1">Swiper Cards</li>
-                      <li class="mb-1">Photo Upload</li>
-                    </ul>
-
-                    <!-- Tags -->
-                    <hr class="mb-4" />
-                    <div
-                      class="d-flex flex-sm-row flex-column pt-2 align-items-center"
-                    >
-                      <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">
-                        Similar Projects:
-                      </h6>
-                      <div>
-                        <span class="badge bg-secondary shadow-secondary"
-                          >MyPRs</span
-                        >
+                    <!-- Sidebar -->
+                    <div class="col-lg-4 position-relative">
+                      <div
+                        class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
+                        style="top: 105px !important"
+                      >
+                        <span class="d-block mb-3">Tech Details</span>
+                        <div>
+                          <h6>Type of Project:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Mobile First Web App
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Hosting Platform:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Heroku
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Tech Stack:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                HTML | CSS
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                React
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Node.js | Express
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                MongoDB
+                              </li>
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Amazon S3
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>Role:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                Fullstack
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <h6>URL:</h6>
+                          <div class="mb-4">
+                            <ul class="list-unstyled fs-sm pb-md-1 mb-2">
+                              <li class="d-flex mb-2">
+                                <i
+                                  class="bx bx-right-arrow-alt text-primary me-1"
+                                  style="margin-top: 0.25rem"
+                                ></i>
+                                <a
+                                  href="https://diaper-buddy.herokuapp.com/"
+                                  target="_blank"
+                                  >https://diaper-buddy.herokuapp.com/</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Sidebar -->
-                  <div class="col-lg-4 position-relative">
-                    <div
-                      class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4"
-                      style="top: 105px !important"
-                    >
-                      <span class="d-block mb-3">Tech Details</span>
-                      <div>
-                        <h6>Type of Project:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Mobile First Web App
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Hosting Platform:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Heroku
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Tech Stack:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              HTML | CSS
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              React
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Node.js | Express
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              MongoDB
-                            </li>
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Amazon S3
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>Role:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              Fullstack
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div>
-                        <h6>URL:</h6>
-                        <div class="mb-4">
-                          <ul class="list-unstyled fs-sm pb-md-1 mb-2">
-                            <li class="d-flex mb-2">
-                              <i
-                                class="bx bx-right-arrow-alt text-primary me-1"
-                                style="margin-top: 0.25rem"
-                              ></i>
-                              <a
-                                href="https://diaper-buddy.herokuapp.com/"
-                                target="_blank"
-                                >https://diaper-buddy.herokuapp.com/</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
