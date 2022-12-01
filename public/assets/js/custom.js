@@ -23,6 +23,11 @@ const handleContactSubmit = async () => {
     console.log(data);
     if (data) {
       document.getElementById('emailForm').reset();
+      const alert = document.querySelector('#emailSuccessAlert');
+      alert.classList.remove('d-none');
+      setTimeout(() => {
+        alert.classList.add('d-none');
+      }, 3000);
     }
   } catch (error) {
     console.log('error', error);

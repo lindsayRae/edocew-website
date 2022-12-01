@@ -2291,6 +2291,23 @@
         id="contact"
       >
         <div class="container pt-5 pb-lg-4 pb-xl-5">
+          <!-- Success alert -->
+          <div
+            class="alert d-flex d-none alert-success alert-dismissible fade show"
+            role="alert"
+            id="emailSuccessAlert"
+          >
+            <i class="bx bx-check-circle lead me-3"></i>
+            <div>
+              Your Email has been sent! We will be contacting you shortly
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="row pt-md-2 pt-lg-5 pb-2 pb-md-4">
             <div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
               <h1 class="h3 mb-2">Want to work with us?</h1>
@@ -2299,7 +2316,7 @@
               </h2>
               <div class="nav d-block lead pt-lg-5" style="font-size: 16px">
                 <a
-                  href="#"
+                  href="#contact"
                   class="nav-link fw-normal text-decoration-underline p-0 mb-4"
                   >contact@edocew.com</a
                 >
@@ -2319,6 +2336,7 @@
                       id="fn"
                       required
                     />
+
                     <div class="invalid-feedback">
                       Please enter your full name!
                     </div>
@@ -2365,6 +2383,7 @@
         </div>
       </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
       <div class="container pt-lg-4">
@@ -2452,8 +2471,9 @@
                 <ul class="nav flex-column mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a
-                      href="mailto:contact@edocew.com"
+                      href="#contact"
                       class="d-inline-block px-0 pt-1 pb-2 fw-medium"
+                      data-scroll
                       >contact@edocew.com</a
                     >
                   </li>
