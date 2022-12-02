@@ -69,7 +69,7 @@
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
-
+    <link rel="stylesheet" href="assets/css/custom.css" />
     <!-- Page loading styles -->
     <style>
       .page-loading {
@@ -2041,11 +2041,6 @@
                       <!-- Image -->
                       <div class="gallery mb-4 pb-2">
                         <div class="rounded-3">
-                          <!-- <img
-                            class="rounded-3"
-                            src="assets/img/portfolio/single/diaperbuddy1118x630.png"
-                            alt="Gallery thumbnail"
-                          /> -->
                           <img
                             class="rounded-3"
                             src="assets/img/portfolio/single/diaperBuddy1118x630.png"
@@ -2296,23 +2291,6 @@
         id="contact"
       >
         <div class="container pt-5 pb-lg-4 pb-xl-5">
-          <!-- Success alert -->
-          <div
-            class="alert d-flex d-none alert-success alert-dismissible fade show"
-            role="alert"
-            id="emailSuccessAlert"
-          >
-            <i class="bx bx-check-circle lead me-3"></i>
-            <div>
-              Your Email has been sent! We will be contacting you shortly
-            </div>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-            ></button>
-          </div>
           <div class="row pt-md-2 pt-lg-5 pb-2 pb-md-4">
             <div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
               <h1 class="h3 mb-2">Want to work with us?</h1>
@@ -2331,7 +2309,7 @@
             <div
               class="col-lg-6 offset-xl-1 offset-xxl-2 pt-3 pt-md-4 pt-lg-3 mt-3"
             >
-              <form class="needs-validation" novalidate id="emailForm">
+              <form novalidate id="emailForm">
                 <div class="row g-4">
                   <div class="col-sm-6">
                     <label for="fn" class="form-label fs-base">Full name</label>
@@ -2339,12 +2317,7 @@
                       type="text"
                       class="form-control form-control-lg"
                       id="fn"
-                      required
                     />
-
-                    <div class="invalid-feedback">
-                      Please enter your full name!
-                    </div>
                   </div>
                   <div class="col-sm-6">
                     <label for="email" class="form-label fs-base">Email</label>
@@ -2352,11 +2325,7 @@
                       type="email"
                       class="form-control form-control-lg"
                       id="email"
-                      required
                     />
-                    <div class="invalid-feedback">
-                      Please provide a valid email address!
-                    </div>
                   </div>
                   <div class="col-12 pb-2">
                     <label for="message" class="form-label fs-base"
@@ -2366,13 +2335,19 @@
                       class="form-control form-control-lg"
                       id="message"
                       rows="3"
-                      required
                     ></textarea>
-                    <div class="invalid-feedback">
-                      Please provide a message!
-                    </div>
                   </div>
                   <div class="col-12">
+                    <div class="line">
+                      <p class="text-success d-none lineUp" id="emailSuccess">
+                        You email has been sent! We will be contacting you
+                        shortly.
+                      </p>
+                      <p class="text-danger d-none lineUp" id="formFail">
+                        Please complete all form fields
+                      </p>
+                    </div>
+
                     <button
                       type="submit"
                       class="btn btn-lg btn-primary w-100 w-sm-auto"
