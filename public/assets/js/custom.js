@@ -5,6 +5,7 @@ document.getElementById('contactSubmitBtn').addEventListener('click', (e) => {
 });
 
 const handleContactSubmit = async (body) => {
+  let fail = document.getElementById('formFail');
   try {
     const response = await fetch('/api/email', {
       method: 'POST',
@@ -23,6 +24,10 @@ const handleContactSubmit = async (body) => {
       setTimeout(() => {
         alert.classList.add('d-none');
       }, 4000);
+    } else {
+      fail.classList.remove('d-none');
+      fail.innerText =
+        'Oops, there was problem sending the email. Please email us directly through your email provider. contact@edocew.com';
     }
   } catch (error) {
     console.log('error', error);
@@ -36,7 +41,7 @@ const formValidate = () => {
     leadMessage: document.getElementById('message').value,
   };
 
-  const fail = document.getElementById('formFail');
+  let fail = document.getElementById('formFail');
 
   if (!body.leadFullName || !body.leadEmail || !body.leadMessage) {
     fail.classList.remove('d-none');

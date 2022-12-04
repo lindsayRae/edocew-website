@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
     // nodemailer.response: 250 2.0.0 OK <CH2PR14MB4005FE869D6775CC3C284AD294129@CH2PR14MB4005.namprd14.prod.outlook.com> [Hostname=CH2PR14MB4005.namprd14.prod.outlook.com]
     // nodemailer.response: 535 5.7.139 Authentication unsuccessful, the user credentials were incorrect. [CH2PR15CA0029.namprd15.prod.outlook.com]
-
+    console.log(nodemailer.response);
     if (nodemailer.response.includes('OK')) {
       return res.send(true);
     } else {
