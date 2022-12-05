@@ -61,6 +61,11 @@
       media="screen"
       href="assets/vendor/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/img-comparison-slider/dist/styles.css"
+    />
     <!-- <link
       rel="stylesheet"
       media="screen"
@@ -1150,8 +1155,8 @@
                   >
                   <h5 class="card-title">Diaper Buddy</h5>
                   <p class="card-text fs-sm">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Mobile web application that tracks baby diaper usage. Emails
+                    notifications when inventory is low.
                   </p>
                   <button
                     type="button"
@@ -1427,39 +1432,74 @@
                     <div class="col-lg-8">
                       <!-- Image -->
                       <div class="gallery mb-4 pb-2">
-                        <div class="rounded-3">
+                        <img-comparison-slider>
+                          <figure slot="first" class="position-relative">
+                            <img
+                              src="assets/img/portfolio/single/rb-original1118x630.png"
+                              alt="Image before"
+                            />
+                            <figcaption
+                              class="badge position-absolute top-50 start-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 ms-3 ms-sm-4"
+                            >
+                              Before
+                            </figcaption>
+                          </figure>
+                          <figure slot="second" class="position-relative">
+                            <img
+                              src="assets/img/portfolio/single/rb1118x630.png"
+                              alt="Image after"
+                            />
+                            <figcaption
+                              class="badge position-absolute top-50 end-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 me-3 me-sm-4"
+                            >
+                              After
+                            </figcaption>
+                          </figure>
+                          <div slot="handle" style="position: relative">
+                            <svg
+                              class="text-primary shadow-primary rounded-circle"
+                              width="36"
+                              height="36"
+                              xmlns="http://www.w3.org/2000/svg"
+                              x="0px"
+                              y="0px"
+                              viewBox="0 0 36 36"
+                            >
+                              <g>
+                                <circle
+                                  fill="currentColor"
+                                  cx="18"
+                                  cy="18"
+                                  r="18"
+                                />
+                              </g>
+                              <path
+                                fill="#fff"
+                                d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z"
+                              />
+                            </svg>
+                          </div>
+                        </img-comparison-slider>
+                        <!-- <div class="rounded-3">
                           <img
                             class="rounded-3"
                             src="assets/img/portfolio/single/rb1118x630.png"
                             alt="Gallery thumbnail"
                           />
-                        </div>
+                        </div> -->
                       </div>
 
                       <p class="mb-4 pb-2">
-                        This application is a mobile friendly website that
-                        tracks fitness personal records. A user can create an
-                        account and log into the application to record fitness
-                        goals. myPRs has three categories of movements: Lifts,
-                        Cardio and Skills. The application is already loaded
-                        with predefined movements in each category and the user
-                        can create new movements to add to their list. Within
-                        each specific movement, the user can add new 1 rep max
-                        logs, edit the log or delete it. I was inspired to
-                        create this project because I needed a way to track my
-                        own fitness personal records with a specific, easy to
-                        use application. There are many other beautiful fitness
-                        application on the market but they tend to get very busy
-                        with too many options and I just wanted a simple quick
-                        way to look at my person fitness records.
+                        Retail Backbone is an established software company that
+                        needed a new website with modern code, a fresh look and
+                        new features. The features we added were a fully
+                        responsive layout, team section with avatars, job
+                        postings, product videos and much more.
                       </p>
 
                       <p class="mb-4 pb-2">
-                        My focus on this project was to build the frontend in
-                        React. Node.js is being used for the backend and MongoDB
-                        for the database. I used Balsamiq to wireframe my design
-                        and lucid charts to map out my data. Postman was used to
-                        test all of my endpoints throughout development.
+                        We worked together to pick a design theme that would
+                        resonate with their clientele and attract new clients.
                       </p>
 
                       <h4 class="h6">
@@ -1638,29 +1678,21 @@
                       </div>
 
                       <p class="mb-4 pb-2">
-                        This application is a mobile friendly website that
-                        tracks fitness personal records. A user can create an
-                        account and log into the application to record fitness
-                        goals. myPRs has three categories of movements: Lifts,
-                        Cardio and Skills. The application is already loaded
-                        with predefined movements in each category and the user
-                        can create new movements to add to their list. Within
-                        each specific movement, the user can add new 1 rep max
-                        logs, edit the log or delete it. I was inspired to
-                        create this project because I needed a way to track my
-                        own fitness personal records with a specific, easy to
-                        use application. There are many other beautiful fitness
-                        application on the market but they tend to get very busy
-                        with too many options and I just wanted a simple quick
-                        way to look at my person fitness records.
+                        Shirley Sei Bella is a family-owned salon that had been
+                        open for years, but they never had a website. We met
+                        with the client and discussed their needs and website
+                        objectives. We walked through the whole process and
+                        picked a design template that would suit their brand.
+                        The client utilized a variety of our add-on services
+                        like domain purchase, domain registration, website
+                        hosting and Google Analytics.
                       </p>
 
                       <p class="mb-4 pb-2">
-                        My focus on this project was to build the frontend in
-                        React. Node.js is being used for the backend and MongoDB
-                        for the database. I used Balsamiq to wireframe my design
-                        and lucid charts to map out my data. Postman was used to
-                        test all of my endpoints throughout development.
+                        This website is fully responsive, so it looks great
+                        across all devises. The client had us pick some stock
+                        photos, but the majority of photos were taken at the
+                        salon for the website.
                       </p>
 
                       <h4 class="h6">
@@ -1840,29 +1872,12 @@
                       </div>
 
                       <p class="mb-4 pb-2">
-                        This application is a mobile friendly website that
-                        tracks fitness personal records. A user can create an
-                        account and log into the application to record fitness
-                        goals. myPRs has three categories of movements: Lifts,
-                        Cardio and Skills. The application is already loaded
-                        with predefined movements in each category and the user
-                        can create new movements to add to their list. Within
-                        each specific movement, the user can add new 1 rep max
-                        logs, edit the log or delete it. I was inspired to
-                        create this project because I needed a way to track my
-                        own fitness personal records with a specific, easy to
-                        use application. There are many other beautiful fitness
-                        application on the market but they tend to get very busy
-                        with too many options and I just wanted a simple quick
-                        way to look at my person fitness records.
-                      </p>
-
-                      <p class="mb-4 pb-2">
-                        My focus on this project was to build the frontend in
-                        React. Node.js is being used for the backend and MongoDB
-                        for the database. I used Balsamiq to wireframe my design
-                        and lucid charts to map out my data. Postman was used to
-                        test all of my endpoints throughout development.
+                        This is a website for a fictitious salon. We were
+                        utilizing one of our many website design templates to
+                        showcase possible website options. This website is fully
+                        responsive so it will look great on all devices. The
+                        navigation menu on this site slides out from the right
+                        and will link to specific sections of the webpage.
                       </p>
 
                       <h4 class="h6">
@@ -1988,7 +2003,11 @@
                                   class="bx bx-right-arrow-alt text-primary me-1"
                                   style="margin-top: 0.25rem"
                                 ></i>
-                                <a href="#" target="_blank">need...</a>
+                                <a
+                                  href="https://unwind-salon.herokuapp.com/"
+                                  target="_blank"
+                                  >https://unwind-salon.herokuapp.com/</a
+                                >
                               </li>
                             </ul>
                           </div>
@@ -2047,29 +2066,15 @@
                       </div>
 
                       <p class="mb-4 pb-2">
-                        This application is a mobile friendly website that
-                        tracks fitness personal records. A user can create an
-                        account and log into the application to record fitness
-                        goals. myPRs has three categories of movements: Lifts,
-                        Cardio and Skills. The application is already loaded
-                        with predefined movements in each category and the user
-                        can create new movements to add to their list. Within
-                        each specific movement, the user can add new 1 rep max
-                        logs, edit the log or delete it. I was inspired to
-                        create this project because I needed a way to track my
-                        own fitness personal records with a specific, easy to
-                        use application. There are many other beautiful fitness
-                        application on the market but they tend to get very busy
-                        with too many options and I just wanted a simple quick
-                        way to look at my person fitness records.
-                      </p>
-
-                      <p class="mb-4 pb-2">
-                        My focus on this project was to build the frontend in
-                        React. Node.js is being used for the backend and MongoDB
-                        for the database. I used Balsamiq to wireframe my design
-                        and lucid charts to map out my data. Postman was used to
-                        test all of my endpoints throughout development.
+                        Diaper Buddy is a website created for mobile devices to
+                        help parents track their diaper inventory. Users can add
+                        multiple children and add and remove diaper inventory by
+                        size. Features we added are graphs, card swiping, and
+                        image uploads. We also connected with an email client
+                        for user sign up and forgot/reset password features. The
+                        application will send an alert email to users when their
+                        diaper inventory is too low as a reminder to purchase
+                        more.
                       </p>
 
                       <h4 class="h6">
@@ -2481,6 +2486,7 @@
     <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
     <!-- <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script> -->
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/img-comparison-slider/dist/index.js"></script>
 
     <!-- <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
     <!-- <script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script> -->
