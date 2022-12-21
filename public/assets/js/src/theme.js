@@ -5,7 +5,7 @@
  *
  * @author Createx Studio
  * @version 1.3.0
-*/
+ */
 
 import themeModeSwitch from './components/theme-mode-switch';
 import stickyNavbar from './components/sticky-navbar';
