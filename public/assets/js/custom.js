@@ -1,12 +1,13 @@
 document.getElementById('contactSubmitBtn').addEventListener('click', (e) => {
   e.preventDefault();
-  let validated = formValidate();
-  if (validated) handleContactSubmit();
+  let body = formValidate();
+  if (body) handleContactSubmit(body);
 });
 
 const handleContactSubmit = async (body) => {
   let fail = document.getElementById('formFail');
   try {
+    console.log('body', body);
     const response = await fetch('/api/email', {
       method: 'POST',
       headers: {
