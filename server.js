@@ -1,13 +1,17 @@
-const express = require('express');
-const path = require('path');
+import dotenv from 'dotenv';
+import express from 'express';
+import path from 'path';
+import { emailRoute } from './routes/emailRoute.js';
+
+dotenv.config();
+
 const app = express();
 const port = process.env.PORT || 1234;
-const email = require('./routes/email');
 
 app.use(express.static('public'));
 app.use(express.json()); // our server can accept json in body of request
 
-app.use('/api/email', email);
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
   // serve any static files
@@ -17,6 +21,10 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
 }
+
+app.post('/api/email', (req, res) => {
+  emailRoute(req, res);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
