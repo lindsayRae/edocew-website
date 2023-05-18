@@ -1,5 +1,2 @@
 User-agent:*
 Allow: /
-
-#need sitemap is optional
-#syntax ->  sitemap: https://example.com/sitemap-file.xml
