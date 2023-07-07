@@ -758,9 +758,14 @@
         <h2 class="h1 pb-md-3 pb-lg-4 mb-md-4">Testimonials</h2>
         <div class="row">
           <div class="col-md-5 d-none d-md-block">
-            <div class="card h-100 border-0 overflow-hidden px-md-4">
+            <div class="card h-100 border-0 overflow-hidden px-md-4" style="background: radial-gradient(
+              116.18% 118% at 50% -3%,
+              rgba(99, 102, 241, 0.1) 0%,
+              rgba(218, 70, 239, 0.05) 41.83%,
+              rgba(241, 244, 253, 0.07) 82.52%
+            );">
               <span
-                class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"
+                class="position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"
               ></span>
               <div
                 class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4"
@@ -772,7 +777,87 @@
             </div>
           </div>
           <div class="col-md-7">
-            <div class="card border-0 shadow-sm p-4 p-xxl-5">
+            <!-- Testimonials slider: Style 1 -->
+<div class="position-relative px-sm-5">
+
+  <!-- Prev button -->
+  <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm position-absolute top-50 translate-middle-y start-0 d-none d-sm-inline-flex mt-n4">
+    <i class="bx bx-chevron-left"></i>
+  </button>
+
+  <!-- Next button -->
+  <button type="button" id="next" class="btn btn-next btn-icon btn-sm position-absolute top-50 translate-middle-y end-0 d-none d-sm-inline-flex mt-n4">
+    <i class="bx bx-chevron-right"></i>
+  </button>
+
+  <!-- Slider -->
+  <div class="swiper swiper-nav-onhover pt-1 mx-md-2" data-swiper-options='{
+    "spaceBetween": 12,
+    "loop": true,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "navigation": {
+      "prevEl": "#prev",
+      "nextEl": "#next"
+    }
+  }'>
+    <div class="swiper-wrapper pt-4 pb-3">
+
+    
+
+      <!-- Item -->
+      <div class="swiper-slide h-auto px-2">
+        <figure class="card h-100 position-relative border-0 shadow-sm py-3 p-0 p-xxl-4 my-0">
+          <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4 ms-xxl-5">
+            <i class="bx bxs-quote-left"></i>
+          </span>
+          <blockquote class="card-body mt-2 mb-2">
+            <p class="fs-lg mb-0">I had a fantastic experience working with Lindsay as my web developer. Despite my business being established for years without a website, Lindsay guided me through the entire process seamlessly. From securing a domain name to designing and hosting my website, Lindsay's expertise and support were invaluable. The end result exceeded my expectations, and I am thrilled with the outcome. Lindsay's professionalism, attention to detail, and clear communication made the collaboration effortless. I highly recommend Lindsay for anyone in need of web development services.</p>
+          </blockquote>
+          <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
+            <img
+            src="assets/img/kylee120x120.webp"
+            width="60"
+            class="rounded-circle"
+            alt="Ralph Edwards"
+          />
+          <div class="ps-3">
+            <h6 class="fw-semibold lh-base mb-0">Kylee Hanhold</h6>
+            <span class="fs-sm text-muted"
+              >Owner | Stylist at Shirley Sei Bella
+            </span>
+          </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Item -->
+      <div class="swiper-slide h-auto px-2">
+        <figure class="card h-100 position-relative border-0 shadow-sm py-3 p-0 p-xxl-4 my-0">
+          <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4 ms-xxl-5">
+            <i class="bx bxs-quote-left"></i>
+          </span>
+          <blockquote class="card-body mt-2 mb-2">
+            <p class="fs-lg mb-0">It was my pleasure to work with Lindsay. She was very professional and courteous. The most attributes I appreciate about her are punctuality, patience, and communication. She always had creative ideas to help me think outside of the box for my business website. She initially schedule a consultation call with me and gather all information regarding my expectations and desire for my website. She provided a very detailed scope of work and quote. I truly enjoyed working with her and I will highly recommend her to anyone who is looking to build a website from scratch or making some cosmetic changes.</p>
+          </blockquote>
+          <figcaption class="card-footer d-flex align-items-center border-0 pt-0 mt-n2 mt-lg-0">
+            <img src="assets/img/parina.png" width="60" class="rounded-circle" alt="Robert Fox">
+            <div class="ps-3">
+              <h6 class="fw-semibold lh-base mb-0">Parina Kamdar</h6>
+              <span class="fs-sm text-muted">Owner at Kamdar Bookkeeping Plus</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+  </div>
+</div>
+            <!-- <div class="card border-0 shadow-sm p-4 p-xxl-5">
               <div class="d-flex justify-content-between pb-4 mb-2">
                 <span
                   class="btn btn-icon btn-primary btn-lg shadow-primary pe-none"
@@ -782,7 +867,7 @@
               </div>
 
               <div class="swiper-wrapper">
-                <!-- Item -->
+               
                 <div class="swiper-slide h-auto">
                   <figure
                     class="card h-100 position-relative border-0 bg-transparent"
@@ -814,8 +899,9 @@
                     </figcaption>
                   </figure>
                 </div>
+              
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
